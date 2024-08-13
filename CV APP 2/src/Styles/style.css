@@ -1,0 +1,63 @@
+p {
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+}
+#big-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 1.5em;
+}
+
+#left-container {
+  /* display: flex; */
+  justify-content: flex-start;
+  overflow: clip;
+}
+
+fieldset {
+  min-width: 80%;
+}
+
+.box {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 2.5em;
+  padding: 1em;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.noBullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cardTitle {
+  width: calc(100% * (1 / 2) - 10px - 1px);
+  align-content: flex-start;
+}
+/* .cardDate {
+	width: calc(100% * (1 / 2) - 10px - 1px);
+} */
+.cardSubTitle {
+  width: calc(100% * (1 / 2) - 10px - 1px);
+}
+.cardDescription {
+  width: 100%;
+}
+
+.position-desired,
+.miscellanea-data {
+  text-align: center;
+}
