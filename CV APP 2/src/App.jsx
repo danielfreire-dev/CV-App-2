@@ -13,7 +13,9 @@ function App() {
         <div id="left-container">
           <Form></Form>
         </div>
-        <div id="right-container"></div>
+        <div id="right-container">
+          <Resume></Resume>
+        </div>
       </div>
     </>
   );

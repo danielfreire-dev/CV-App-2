@@ -1,6 +1,6 @@
 import { handleData } from "./handleInfo";
 
-export default function AboutYou(props) {
+export default function AboutYou(props, onChangeFunction) {
   return (
     <form>
       <fieldset>
@@ -14,7 +14,7 @@ export default function AboutYou(props) {
                   type="text"
                   name="firstName"
                   placeholder={props.firstName}
-                  onChange={props.handleData}
+                  onChange={onChangeFunction}
                 />
               </td>
               <td className="input">
@@ -23,7 +23,7 @@ export default function AboutYou(props) {
                   type="text"
                   name="lastName"
                   placeholder={props.lastName}
-                  onChange={props.handleData}
+                  onChange={onChangeFunction}
                 />
               </td>
             </tr>
@@ -34,7 +34,7 @@ export default function AboutYou(props) {
                   type="text"
                   name="phoneNumber"
                   placeholder={props.phoneNumber}
-                  onChange={props.handleData}
+                  onChange={onChangeFunction}
                 />
               </td>
               <td className="input">
@@ -43,7 +43,7 @@ export default function AboutYou(props) {
                   type="text"
                   name="mail"
                   placeholder={props.mail}
-                  onChange={props.handleData}
+                  onChange={onChangeFunction}
                 />
               </td>
             </tr>
@@ -54,7 +54,7 @@ export default function AboutYou(props) {
                   type="text"
                   name="address"
                   placeholder={props.address}
-                  onChange={props.handleData}
+                  onChange={onChangeFunction}
                 />
               </td>
               <td className="input">
@@ -63,7 +63,7 @@ export default function AboutYou(props) {
                   type="text"
                   name="city"
                   placeholder={props.city}
-                  onChange={props.handleData}
+                  onChange={onChangeFunction}
                 />
               </td>
             </tr>
@@ -74,7 +74,7 @@ export default function AboutYou(props) {
                   type="text"
                   name="country"
                   placeholder={props.country}
-                  onChange={props.handleData}
+                  onChange={onChangeFunction}
                 />
               </td>
               <td className="input">
@@ -83,7 +83,7 @@ export default function AboutYou(props) {
                   type="text"
                   name="positionDesired"
                   placeholder={props.positionDesired}
-                  onChange={props.handleData}
+                  onChange={onChangeFunction}
                 />
               </td>
             </tr>
@@ -94,7 +94,7 @@ export default function AboutYou(props) {
                   type="text"
                   name="about"
                   placeholder={props.about}
-                  onChange={props.handleData}
+                  onChange={onChangeFunction}
                 />
               </td>
             </tr>
