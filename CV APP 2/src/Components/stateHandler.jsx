@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 export function aboutState() {
 	const defaultAbout = {
 		firstName: "John",
@@ -12,18 +11,22 @@ export function aboutState() {
 		city: "Town",
 		country: "Country",
 		about: "John Rulezzz!",
+		onChangeFunction: (e) => {
+			handleAbout(e);
+		},
 	};
 
 	const [about, setAbout] = useState(defaultAbout);
 
-	const handleAbout = (e) => {
+	console.log(about);
 
-
+	function handleAbout(e) {
 		setAbout({
-      ...about,
-      [e.target.name]: e.target.value,
-    });
-	};
+			...about,
+			[e.target.name]: e.target.value,
+		});
+	}
+	console.log(about);
 
 	return [about, handleAbout];
 }
