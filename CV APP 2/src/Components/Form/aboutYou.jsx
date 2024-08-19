@@ -3,9 +3,9 @@
 import { aboutState } from "../stateHandler";
 
 export default function AboutYou(props) {
-	const [about, handleAbout] = aboutState();
+	/* const [about, handleAbout] = aboutState(); */
 	/* console.log(about); */
-	console.log(handleAbout);
+	/* console.log(handleAbout); */
 	return (
 		<form>
 			<fieldset>

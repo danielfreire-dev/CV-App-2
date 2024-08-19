@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-export function aboutState() {
+export function aboutState(e) {
+	/* console.log("aboutState is running"); */
+
 	const defaultAbout = {
 		firstName: "John",
 		lastName: "Doe",
@@ -18,15 +20,19 @@ export function aboutState() {
 
 	const [about, setAbout] = useState(defaultAbout);
 
-	console.log(about);
-
+	/* console.log(about); */
 	function handleAbout(e) {
+		e.preventDefault();
+		console.log("handleAbout is running");
 		setAbout({
 			...about,
 			[e.target.name]: e.target.value,
 		});
+		console.log(about);
+		console.log(setAbout);
+		console.log(defaultAbout);
 	}
-	console.log(about);
+	/* console.log(about); */
 
 	return [about, handleAbout];
 }
