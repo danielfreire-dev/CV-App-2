@@ -35,7 +35,7 @@ export default function Form() {
 				country={about.country}
 				positionDesired={about.positionDesired}
 				about={about.about}
-				onChange={console.log((e) => handleAbout(e))}
+				onChangeFunction={about.onChangeFunction}
 			></AboutYou>
 			<Web
 				linkedin={web.linkedin}
