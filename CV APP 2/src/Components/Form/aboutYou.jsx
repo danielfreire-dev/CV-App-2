@@ -1,6 +1,11 @@
-import { handleData } from "./handleInfo";
+/* eslint-disable react/prop-types */
+
+
+import { aboutState } from "../stateHandler";
 
 export default function AboutYou(props, onChangeFunction) {
+  const [about, handleAbout] = aboutState();
+
   return (
     <form>
       <fieldset>

@@ -1,68 +1,69 @@
 import { useState } from "react";
-import { handleEducation } from "./Form/handleInfo";
+
 
 export function aboutState() {
-  const defaultAbout = {
-    firstName: "John",
-    lastName: "Doe",
-    positionDesired: "Front End Developer",
-    phoneNumber: "(+0) 123 456 789",
-    mail: "john.doe@example.com",
-    address: "Street Address",
-    city: "Town",
-    country: "Country",
-    about: "John Rulezzz!",
-  };
+	const defaultAbout = {
+		firstName: "John",
+		lastName: "Doe",
+		positionDesired: "Front End Developer",
+		phoneNumber: "(+0) 123 456 789",
+		mail: "john.doe@example.com",
+		address: "Street Address",
+		city: "Town",
+		country: "Country",
+		about: "John Rulezzz!",
+	};
 
-  const [about, setAbout] = useState(defaultAbout);
+	const [about, setAbout] = useState(defaultAbout);
 
-  function handleAbout(e) {
-    e.preventDefault();
-    setAbout({
+	const handleAbout = (e) => {
+
+
+		setAbout({
       ...about,
       [e.target.name]: e.target.value,
     });
-  }
+	};
 
-  return [about, handleAbout];
+	return [about, handleAbout];
 }
 
 export function webState() {
-  const defaultWeb = {
-    linkedin: "linkedin.com/in/johndoe",
-    github: "github.com/johndoe",
-    personal: "www.example.com",
-  };
+	const defaultWeb = {
+		linkedin: "linkedin.com/in/johndoe",
+		github: "github.com/johndoe",
+		personal: "www.example.com",
+	};
 
-  const [web, setWeb] = useState(defaultWeb);
+	const [web, setWeb] = useState(defaultWeb);
 
-  const handleWeb = (e) => {
-    setWeb({
-      ...web,
-      [e.target.name]: e.target.value,
-    });
-  };
+	const handleWeb = (e) => {
+		setWeb({
+			...web,
+			[e.target.name]: e.target.value,
+		});
+	};
 
-  return [web, handleWeb];
+	return [web, handleWeb];
 }
 
 export function employmentState() {
-  const defaultJob = [
-    {
-      id: 0,
-      position: "Awesome Job",
-      company: "Best Company",
-      start: "2020-01",
-      finish: "2024-01",
-      about: "Job Description",
-      box: false,
-      handleJob: () => {},
-    },
-  ];
+	const defaultJob = [
+		{
+			id: 0,
+			position: "Awesome Job",
+			company: "Best Company",
+			start: "2020-01",
+			finish: "2024-01",
+			about: "Job Description",
+			box: false,
+			handleJob: () => {},
+		},
+	];
 
-  const [job, setJob] = useState(defaultJob);
+	const [job, setJob] = useState(defaultJob);
 
-  /* const listJobs = job.map((jobSingle) => {
+	/* const listJobs = job.map((jobSingle) => {
     return (
       <form key={jobSingle.id}>
         <fieldset>
@@ -141,27 +142,27 @@ export function employmentState() {
     );
   }); */
 
-  const handleJob = (e) => {};
+	const handleJob = (e) => {};
 
-  return [job, handleJob], defaultJob;
+	return [job, handleJob], defaultJob;
 }
 
 export function educationState() {
-  const defaultEducation = [
-    {
-      id: 0,
-      institution: "Institution Name",
-      course: "Name of course",
-      start: "2020-01",
-      finish: "2024-01",
-      about: "course Description",
-      box: false,
-    },
-  ];
+	const defaultEducation = [
+		{
+			id: 0,
+			institution: "Institution Name",
+			course: "Name of course",
+			start: "2020-01",
+			finish: "2024-01",
+			about: "course Description",
+			box: false,
+		},
+	];
 
-  const [education, setEducation] = useState(defaultEducation);
+	const [education, setEducation] = useState(defaultEducation);
 
-  /* const listEducation = education.map((educationSingle) => {
+	/* const listEducation = education.map((educationSingle) => {
 
     return (
       <form>
@@ -241,19 +242,19 @@ export function educationState() {
       </form>
     );
   }); */
-  function handleEducation() {}
-  return [education, handleEducation], defaultEducation;
+	function handleEducation() {}
+	return [education, handleEducation], defaultEducation;
 }
 
 export function miscellaneaState() {
-  const defaultMisc = {
-    skills: { id: 0, name: "React" },
-    certificate: { id: 0, name: "Birth Certificate" },
-  };
+	const defaultMisc = {
+		skills: { id: 0, name: "React" },
+		certificate: { id: 0, name: "Birth Certificate" },
+	};
 
-  const [miscellanea, setMiscellanea] = useState(defaultMisc);
+	const [miscellanea, setMiscellanea] = useState(defaultMisc);
 
-  function handleMisc() {}
+	function handleMisc() {}
 
-  return [miscellanea, setMiscellanea];
+	return [miscellanea, setMiscellanea];
 }

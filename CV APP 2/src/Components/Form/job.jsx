@@ -1,6 +1,6 @@
 import { handleJob } from "./handleInfo";
 
-export default function Jobs(props) {
+export default function Jobs(props, showPresent) {
   return (
     <form>
       <fieldset>
@@ -63,6 +63,7 @@ export default function Jobs(props) {
                   type="checkbox"
                   name="jobBox"
                   defaultValue={false}
+
                   onChange={props.handleJob}
                 />
               </td>

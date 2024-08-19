@@ -1,4 +1,9 @@
+import { aboutState } from "../stateHandler";
+
+
 export default function ResumeHead(props) {
+  const [about, handleAbout] = aboutState();
+
   return (
     <>
       <h1>{props.firstName + " " + props.lastName}</h1>

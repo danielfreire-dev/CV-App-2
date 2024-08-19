@@ -14,6 +14,8 @@ import {
   miscellaneaState,
 } from "./stateHandler";
 
+import "/src/Styles/style.css";
+
 export default function Form() {
   const [about, handleAbout] = aboutState();
   const [web, handleWeb] = webState();
@@ -33,7 +35,7 @@ export default function Form() {
         country={about.country}
         positionDesired={about.positionDesired}
         about={about.about}
-        onChange={handleAbout}
+        onChange={((e) =>handleAbout(e))}
       ></AboutYou>
       <Web
         linkedin={web.linkedin}
