@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function aboutState(e) {
 	/* console.log("aboutState is running"); */
